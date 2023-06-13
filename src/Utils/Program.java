@@ -21,6 +21,7 @@ public class Program extends JFrame implements Runnable {
         run();
 
         ProgramHandler.programs.add(this);
+        isRunning = true;
     }
 
     public void close() {
@@ -31,6 +32,7 @@ public class Program extends JFrame implements Runnable {
             this.setVisible(false);
         }
         ProgramHandler.programs.remove(this);
+        isRunning = false;
     }
 
     @Override
@@ -44,11 +46,12 @@ public class Program extends JFrame implements Runnable {
         background.setAutoscrolls(true);
         background.setBackground(Color.decode("#272727"));
 
-        this.setTitle("Hello there");
+        this.setTitle("Welcome to the TCP/IP Chat App");
         this.setBounds(0, 0, width, height);
-        this.setResizable(false);
+        this.setResizable(true);
         this.setFocusable(true);
         this.setLocationRelativeTo(null);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         this.add(background);

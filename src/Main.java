@@ -1,6 +1,7 @@
 import Utils.Program;
 import Utils.ProgramHandler;
 import Views.ServerPage;
+import Views.WelcomePage;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,14 +14,7 @@ public class Main extends Program {
     }
 
     public Main() {
-        JButton gotoServerPage = new JButton("Go to server");
-        gotoServerPage.setSize(140, 50);
-        gotoServerPage.setBorder(null);
-        gotoServerPage.setBackground(Color.decode("#0073e6"));
-        gotoServerPage.setForeground(Color.decode("#ffffff"));
-        gotoServerPage.setFont(new Font("Open Sans", Font.BOLD, 15));
-
-        background.add(gotoServerPage);
+//        background.add(gotoServerPage);
     }
 
     @Override
@@ -36,7 +30,9 @@ public class Main extends Program {
             e.printStackTrace();
         }
         ProgramHandler.programs = new ArrayList<>();
-        new Main();
+//        new Main();
+        Program page = new WelcomePage();
+//        page.run();
     }
 
 }

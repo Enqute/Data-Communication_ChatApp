@@ -2,15 +2,15 @@ package Views;
 
 import Utils.Program;
 
-public class ServerPage extends Program implements Runnable {
+public class ServerPage extends Program {
 
     public ServerPage() {
-//        this.setTitle("");
+        this.setVisible(true);
     }
 
     @Override
     public void run() {
         super.run();
-        this.setVisible(true);
+
     }
 }
