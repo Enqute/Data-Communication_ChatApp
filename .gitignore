@@ -9,7 +9,6 @@
 
 # Intellij files
 /.idea/
-/template/
 
 # output dir
 /out/
