@@ -1,3 +1,4 @@
+import Controller.Client;
 import Utils.Program;
 import Utils.ProgramHandler;
 import Views.ServerPage;
@@ -30,9 +31,7 @@ public class Main extends Program {
             e.printStackTrace();
         }
         ProgramHandler.programs = new ArrayList<>();
-//        new Main();
         Program page = new WelcomePage();
-//        page.run();
     }
 
 }

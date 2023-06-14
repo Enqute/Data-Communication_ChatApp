@@ -46,7 +46,7 @@ public class Program extends JFrame implements Runnable {
         background.setAutoscrolls(true);
         background.setBackground(Color.decode("#272727"));
 
-        this.setTitle("Welcome to the TCP/IP Chat App");
+        this.setTitle("Welcome to the TCP Chat App");
         this.setBounds(0, 0, width, height);
         this.setResizable(true);
         this.setFocusable(true);
