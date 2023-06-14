@@ -1,5 +1,7 @@
 package Controller;
 
+import Utils.ProgramHandler;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -25,7 +27,7 @@ public class Server implements Runnable {
     @Override
     public void run() {
         try {
-            server = new ServerSocket(4200);
+            server = new ServerSocket(ProgramHandler.port);
             pool = Executors.newCachedThreadPool();
             while (!done) {
                 Socket client = server.accept();
@@ -49,6 +51,7 @@ public class Server implements Runnable {
     public void shutdown() {
         try {
             done = true;
+            pool.shutdown();
             if (!server.isClosed())
                 server.close();
             for (ConnectionHandler ch : connections)

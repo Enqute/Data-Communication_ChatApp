@@ -9,9 +9,13 @@
 
 # Intellij files
 /.idea/
+/template/
 
 # output dir
 /out/
+
+# Intellij files
+/*.iml
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
